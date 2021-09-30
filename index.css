@@ -2,22 +2,28 @@ html{
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
 
 
 a {
     text-decoration: none;
-    color: #dddddd;
+    color: gray;
     
   }
 
-h1 {
-    color: blue;
-}
+
 
 #navbar {
     display: flex;
+    position: fixed;
     justify-content: flex-end;
-    background-color: lightblue;
+    background-color: darkblue;
+    width: 100%;
 }
 .nav-list {
     display: flex;
@@ -25,3 +31,44 @@ h1 {
     list-style-type: none;
   }
   
+  .nav-list a {
+      padding: 1.5rem;
+      display: block;
+      font-size: xx-large;
+    
+  }
+
+  .nav-list a:hover {
+    background-color: #766E9D;
+  }
+
+  #welcome-section{
+      background-color: #969eA18f;
+      height: 100vh;
+  }
+
+ .projects-grid{
+     background-color: darkslategray;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ .project-tile{
+     margin: 1rem;
+ }
+
+ h1 {
+    color: black;
+}
+
+figcaption { 
+    text-align: center;
+    font-size: x-large;
+    color: #555555
+}
+
+#contact{
+    height: 20vh;
+    background-color: #969eA18f ;
+}
