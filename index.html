@@ -12,78 +12,92 @@
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
   crossorigin="anonymous"
 />
-<link
-  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
-  rel="stylesheet"
-/>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <title>Preston's Portfolio</title>
+<title>Preston's Portfolio</title>
 </head>
+
+<!--  NavBar -->
 <body>
     <nav id="navbar">
         <ul class="nav-list">
+            
             <li>
-                <a href="#welcome-section">About</a>
+                <a href="#welcome-section">ABOUT</a>
             </li>
             <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#projects">Projects </a>
+                <a class="anchor" href="#projects">PROJECTS </a>
             </li>
 
             <li>
-                <a href="#contact">Contact </a>
+                <a href="#contact">CONTACT </a>
             </li>
         </ul>
     </nav>
 
     <!--  welcome section -->
     <section id="welcome-section">
-        <h1> Preston Design & Dev</h1>
+      <img src="/images/logo Loop 1.gif">
+      <h1>HIDDEN TO PASS TEST MY GIF ABOVE IS COOLER</h1>
     </section>
 <!--  Projects section -->
-<section id="projects">
+<section id="projects" class="projects-section">
+  <h2 class="projects-section-header">PROJECT GALLERY</h2>
+
     <div class="projects-grid">
-      <a href="#" class="project-tile">
+      <a href="https://avalaunchmedia.com/about/" target="blank" class="project-tile">
         <figure>
-          <img src="/images/Untitled-1-02-02.png"/>
-          <figcaption>My figure caption</figcaption>
+          <img src="/images/Avalaunch Google DIsplay Ads_300x250-05.png"/>
+          <figcaption>AVALAUNCH MEDIA PROJECTS</figcaption>
         </figure>
       </a>
       <a href="#" class="project-tile">
         <figure>
-            <img src="/images/Untitled-1-02-02.png"/>
-          <figcaption>My figure caption</figcaption>
+            <img src="/images/wingmn_300x250-09.png"/>
+          <figcaption>WINGMN CO PROJECTS</figcaption>
         </figure>
       </a>
       <a href="#" class="project-tile">
         <figure>
-            <img src="/images/Untitled-1-02-02.png"/>
-          <figcaption>My figure caption</figcaption>
+            <img src="/images/comingsoon.png"/>
+          <figcaption>WEB DESIGN & DEV PROJECTS</figcaption>
         </figure>
       </a>
     </div>
   </section>
 
     <!--  Contact section -->
-    <section id="contact">
-        <h1>Let's Work Together</h1>
-        <p>Please Hire ME!</p>
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2>NEED HELP WITH A PROJECT?</h2>
+        </h2>
+        <p>Send me a message for my rates and availability. </p>
+      </div>
+      <div class="contact-links">
+        <a
+          id="profile-link"
+          href="https://www.linkedin.com/in/preston-booth-8844511a6/"
+          target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn</a>
 
-    <div>
-        <a id="profile-link" href="https://github.com/prestonwebdev" target="_blank"> <i class="fab fa-github"></i>Github</a>
-        <a id="profile-link" href="https://github.com/prestonwebdev" target="_blank">Facebook</a>
-        <a id="profile-link" href="https://github.com/prestonwebdev" target="_blank">Twitter</a>
-        <a id="profile-link" href="#" target="_blank">Send an Email</a>
-        <a id="profile-link" href="#" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a> 
-    </div>
 
+        <a id="profile-link" href="https://github.com/prestonwebdev" target="_blank"><i class="fab fa-github-alt"></i> Github</a>
+
+
+        <a id="profile-link" href="#"><i class="fab fa-twitter"></i> Twiter</a>
+
+        <a id="profile-link" href="#"><i class="fas fa-at"></i> Send an Email</a>
+        
+        <a id="profile-link" href="#"><i class="fas fa-mobile-alt"></i> Phone</a>
+        
+      </div>
     </section>
+
+
     <footer>
         <p>Created For DGM-1600 &copy; Preston Design & Dev 2021</p>
     
