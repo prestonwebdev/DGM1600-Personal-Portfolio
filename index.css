@@ -49,7 +49,7 @@ a {
 
 #welcome-section {
   background-color: black;
-  height: 80vh;
+  height: 100vh;
   width: auto;
   display: flex;
   flex-direction: column;
