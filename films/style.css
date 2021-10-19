@@ -1,0 +1,22 @@
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    border: 10px solid lightblue;
+}
+
+figcaption{
+    text-align: center;
+    font-size: xx-large;
+    background-color: lightblue;
+    padding-bottom: 0.5em;
+}
+
+figure{
+    background-color: lightblue;
+}

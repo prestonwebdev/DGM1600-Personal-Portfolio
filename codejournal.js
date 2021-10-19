@@ -19,3 +19,6 @@ let myDecimal = 73.4;
 let myBool = true;
 
 print(string1);
+
+//Arrow Function
+//basic syntax is () => {}
