@@ -1,3 +1,25 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    margin: 2em 0;
+}
+
+button{
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+button:hover {
+    backround-color: bisque;
+}
+
 #main{
     display:flex;
     flex-wrap: wrap;
