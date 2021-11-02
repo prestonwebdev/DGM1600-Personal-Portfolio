@@ -1,5 +1,5 @@
 import { people } from '../data/people.js'
-import { getLastNumber } from '../utils/index.js'
+import { getLastNumber, removeChildren } from '../utils/index.js'
 
 const mainContent = document.querySelector('#main')
 
@@ -17,8 +17,7 @@ const otherCharacters = people.filter((person) => {
 const header = document.createElement('header')
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
-
-populateDOM(people)
+//populateDOM(people)
 
 maleButton.addEventListener('click', () => populateDOM(maleCharacters))
 
@@ -34,9 +33,7 @@ document.body.insertBefore(header, mainContent)
 
 function populateDOM(characters) {
   // clear the page first, then populate
-  while (mainContent.firstChild) {
-    mainContent.removeChild(mainContent.firstChild)
-  }
+  removeChildren(mainContent)
   characters.forEach((element) => {
     const charFigure = document.createElement('figure')
     const charImg = document.createElement('img')
@@ -51,4 +48,3 @@ function populateDOM(characters) {
     mainContent.appendChild(charFigure)
   })
 }
-
