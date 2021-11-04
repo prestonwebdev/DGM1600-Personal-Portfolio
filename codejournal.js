@@ -22,3 +22,7 @@ print(string1);
 
 //Arrow Function
 //basic syntax is () => {}
+
+
+//Filter Map Reduce
+
