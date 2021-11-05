@@ -2,11 +2,21 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+  }
   
+ 
+  #navbar{
+    background-color: white;
+    z-index: 99;
+  }
   header {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
-    background-color: #333;
+    background-color:  rgb(18, 20, 20) !important;
     padding: 2em 0;
   }
   
@@ -14,6 +24,7 @@
     font-size: x-large;
     border-radius: 10px;
     background-color: aqua;
+    padding: 0 50px 0 50px
   }
   
   button:hover {
@@ -24,16 +35,57 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgb(18, 20, 20);
   }
   
-  figure {
-    margin: 4px;
-  }
   
   figure img {
     width: 200px;
+    
+    
   }
   
   figcaption {
     text-align: center;
   }
+
+  .card{
+    width: 250px;
+    height: 315px;
+    margin: 10px;
+    background-color: #ffffff15 !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+
+    ;
+   
+  }
+  .image{
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+
+   .is-6{
+   color:white !important;
+   margin: 0px !important;
+   padding: 0px;
+ }
+ 
+.title{
+  color:white !important;
+  margin-bottom: 5px !important;
+}
+
+.filterDiv{
+  display: flex !important;
+  justify-content: space-around !important;
+  background-color:  rgb(18, 20, 20);
+  padding-top: 2.5em;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  
+
+}
+  
