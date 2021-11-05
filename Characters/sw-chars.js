@@ -21,6 +21,13 @@ hero.className = "media-hero"
 const heroBody = document.createElement('div')
 heroBody.className = "media-hero-body"
 
+const heroTitle = document.createElement('p')
+heroTitle.className = "title"
+
+header.appendChild(hero)
+hero.appendChild(heroBody)
+heroBody.appendChild(heroTitle)
+
 
 
 //Create Filter Buttons
