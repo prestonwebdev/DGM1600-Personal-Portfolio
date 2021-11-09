@@ -1,22 +1,91 @@
 
 
-main{
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+ 
+  #navbar{
+    background-color: white;
+    z-index: 99;
+  }
+  header {
+   
+    background-color:  rgb(18, 20, 20) !important;
+    width:100vw;
+  }
+  
+
+
+  .hero{
+    display:flex;
+    flex-wrap: wrap;
+    height: 500px;
+    background-image: url(/images/stars.png);
+    color:white;
+    padding-bottom: 25px;
+   
+  }
+
+  .title{
+    margin-bottom:15px;
+    padding-bottom: 25px;
+  }
+
+
+  
+
+  #filmList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-img {
-    border: 10px solid lightblue;
-}
-
-figcaption{
+    background-color: rgb(18, 20, 20);
+  }
+  
+  
+  
+  
+  figcaption {
     text-align: center;
-    font-size: xx-large;
-    background-color: lightblue;
-    padding-bottom: 0.5em;
+  }
+
+  .card{
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    padding-top: 25px;
+    background-color: #ffffff15 !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    display:flex;
+    flex-direction: column;
+   
+  }
+
+  .card-image{
+    
+    margin-left: auto  !important;
+    margin-right: auto !important;
+    margin-top: 25px;
+  }
+
+   .is-6{
+   color:white !important;
+   margin: 0px !important;
+   padding: 0px;
+ }
+ 
+.title{
+  color:white !important;
+  margin-bottom: 5px !important;
 }
 
-figure{
-    background-color: lightblue;
+
+#filmList{
+    padding-top: 50px;
 }
