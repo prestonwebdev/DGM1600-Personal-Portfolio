@@ -61,7 +61,7 @@
     margin: 10px;
     padding-top: 25px;
     background-color: #ffffff15 !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    
     display:flex;
     flex-direction: column;
    
