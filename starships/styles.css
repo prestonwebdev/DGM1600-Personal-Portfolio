@@ -4,18 +4,64 @@
   }
   
   header, footer {
-    font-family: 'Fruktur', cursive;
+  
     font-size: xx-large;
-    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    
   }
   
-  .nav {
-    margin-left: 1rem;
+  .left-nav {
+    margin-left: 100px;
+  }
+  #navbar{
+    background-color: white;
+    z-index: 99;
   }
   
   #main {
-    display: flex;
+   display: flex;
+ flex-direction: row-reverse;
+    background-color: rgb(18, 20, 20);
+    padding: 2em 2em;
   }
+
+
+
+
+  .sw-nav{
+    display: flex;
+    padding-top: 35px;
+    
+  }
+
+  .sw-buttons{
+   
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  button{
+   padding: 15px 25px 15px 25px;
+   font-size: large;
+   background-color: #ffffff15 !important;
+   color: white;
+   border-radius: 5px;
+   border:none;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+  
+  }
+
+  button:hover{
+  
+    background-color: #ffffff25 !important;
+   }
+
+  .buttonLink{
+    margin: 15px;
+  }
+
   
   section {
     display: flex;
@@ -25,7 +71,94 @@
   }
   
   .box {
-    background-color: bisque;
+    background-color: grey;
     text-align: center;
     font-size: xx-large;
   }
+
+
+.modal-close{
+  margin-top: 80px;
+}
+
+a li{
+  color: white;
+  font-size: 20px;
+ 
+
+}
+
+ .yellowUnderline :hover{
+  color: rgb(223, 220, 33);
+  text-decoration: underline;
+
+}
+ 
+
+ 
+  .hero{
+    display:flex;
+    flex-wrap: wrap;
+    height: 500px;
+    background-image: url(/images/stars.png);
+    color:white;
+    padding-bottom: 25px;
+   
+  }
+
+  .title{
+    margin-bottom:15px;
+    padding-bottom: 25px;
+  }
+
+  .card {
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    padding: 25px 25px;
+    background-color: #ffffff15 !important;
+    display:flex;
+    flex-direction: column;
+    margin-left: 50px;
+    padding-left: 20px;
+    
+   
+  }
+
+  .card.shipDisplay {
+   width:auto;
+    height: auto;
+    margin: 10px;
+    padding: 25px 25px;
+    background-color: #ffffff15 !important;
+    display:flex;
+    flex-direction: column;
+    margin-left: 50px;
+    padding-left: 20px;
+    
+  }
+
+  .card.shipDisplay.hidden{
+    display:none;
+     
+   }
+
+  
+
+  .title{
+    color: white;
+    margin-top: 15px;
+    padding-bottom: 1px;
+  }
+
+  .title .is-6{
+    padding: 0px;
+    margin-top: 0px !important;
+  }
+
+
+
+
+.hidden{
+  display: none;
+}

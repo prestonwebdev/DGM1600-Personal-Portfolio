@@ -19,12 +19,15 @@ const header = document.createElement('header')
 
 //Create Filter Buttons
 const maleButton = document.createElement('button')
+maleButton.className = "sortButton"
 maleButton.textContent = 'Male Characters'
 
 const otherButton = document.createElement('button')
+otherButton.className = "sortButton"
 otherButton.textContent = 'Other Characters'
 
 const femaleButton = document.createElement('button')
+femaleButton.className = "sortButton"
 femaleButton.textContent = 'Female Characters'
 
 

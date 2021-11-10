@@ -15,10 +15,12 @@
     background-color: white;
     z-index: 99;
   }
+
+
   header {
    
     background-color:  rgb(18, 20, 20) !important;
-    width:100vw;
+    width: auto;
   }
   
 
@@ -39,6 +41,45 @@
   }
 
 
+
+
+
+  .sw-nav{
+    display: flex;
+    padding-top: 35px;
+    
+  }
+
+  .sw-buttons{
+   
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  button{
+   padding: 15px 25px 15px 25px;
+   font-size: large;
+   background-color: #ffffff15 !important;
+   color: white;
+   border-radius: 5px;
+   border:none;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+  
+  }
+
+  button:hover{
+  
+    background-color: #ffffff25 !important;
+   }
+
+  .buttonLink{
+    margin: 15px;
+  }
+
+
+  
   
 
   #filmList {

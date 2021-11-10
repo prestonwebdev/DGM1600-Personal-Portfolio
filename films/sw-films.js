@@ -13,7 +13,7 @@ for(let i = 0; i < films.length; i++){
 
 
     const cardDiv = document.createElement('div')
-    cardDiv.className = "card"
+    cardDiv.className = "card leftNav"
 
     //create a bulma "image div"
     const imageDiv = document.createElement('div')
@@ -58,7 +58,7 @@ for(let i = 0; i < films.length; i++){
 
      const producer = document.createElement('p')
      producer.className = "subtitle is-6"
-     producer.textContent = "Release Date: "+ foundFilm.producer
+     producer.textContent = "Producer(s): "+ foundFilm.producer
 
     cardDiv.appendChild(imageDiv)
     cardDiv.appendChild(contentDiv)
