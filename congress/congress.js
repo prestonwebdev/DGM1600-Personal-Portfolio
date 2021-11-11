@@ -1,27 +1,27 @@
-import{ senators } from '../Data/senators.js'
+
+import { senators } from '../data/senators.js'
 
 const senatorDiv = document.querySelector('.senators')
 
-
-function SimplifiedSenators(senatorArray){
-    return senatorArray.map(senator => {
-
-        let middleName = senator.middle_name ? ` ${senator.middleName} ` : ` `
-        return{
-            id: senator.id,
-            name: `${senator.first_name}${middleName}${senator.first_name}`,
-            party: senator.party,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`
-        }
-    })
+function SimplifiedSenators() {
+  return senatorArray.map(senator => {
+    let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
+    return {
+      id: senator.id,
+      name: `${senator.first_name}${middleName}${senator.last_name}`,
+      party: senator.party,
+      imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`
+    }
+  })
 }
 
 
-function populateSenators(simpleSenators){
-simpleSenators.forEach(senator => {
+
+function populateSenatorDiv(simpleSenators) {
+  simpleSenators.forEach(senator => {
     const senFigure = document.createElement('figure')
     const figImg = document.createElement('img')
-    const figImg = document.createElement('figcaption')
+    const figCaption = document.createElement('figcaption')
 
     figImg.src = senator.imgURL
     figCaption.textContent = senator.name
@@ -29,5 +29,14 @@ simpleSenators.forEach(senator => {
     senFigure.appendChild(figImg)
     senFigure.appendChild(figCaption)
     senatorDiv.appendChild(senFigure)
-})
+  })
+
 }
+
+const filterSenator = (prop, value) => Simplifiedsenators.filter(senator => senators[prop] === value)
+
+
+const mostSeniorSenator = SimplifiedSenators(sen)
+
+
+populateSenatorDiv(SimplifiedSenators(senators))
