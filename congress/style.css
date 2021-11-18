@@ -1,26 +1,26 @@
-*{ 
+* {
     margin: 0;
     box-sizing: border-box;
-}
-
-header {
-    
-}
-
-.senators {
+  }
+  
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+  .senators {
     display: flex;
     flex-wrap: wrap;
-}
-
-figure {
+  }
+  
+  figure {
     width: 160px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 1em;
-
-}
-
-figcaption{
+  }
+  
+  figcaption {
     text-align: center;
-}
+  }
