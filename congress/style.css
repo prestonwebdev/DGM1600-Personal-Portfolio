@@ -71,10 +71,11 @@
     background-color: #F0F0F0;
   }
 
-  .peopleOfCongress h1{
+  .congressHeading{
     text-align: center;
     font-size: 3rem;
     font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;;
   }
 
   #seniorMember{
@@ -120,11 +121,36 @@ padding-left: 15px;
       width: 500px;
     }
 
+
+    .senatorNav{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fivesen{
+      display:flex;
+      flex-direction: row;
+
+    }
+
+    .senatorNav .button{
+      margin-top:20px;
+      background-color: #6FA8B5;
+      color:white;
+    }
+
+    .senatorNav .button:hover{
+      margin-top:20px;
+      background-color: white;
+      color: #6FA8B5;
+    }
   
   .senators {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 150px;
   }
   
   figure {
@@ -140,15 +166,32 @@ padding-left: 15px;
 
 
 
+
+  .loyaltyList{
+    font-size: 20px;
+    list-style-type: none !important;
+    display:inline;
+    
+  
+   
+  }
+
+  .mostLoyal{
+    width: 85%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
   .learnMore{
     background-color: #6FA8B5;
-    height: 400px;
+ 
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 30px;
+    padding: 50px 50px ;
   }
 
   .congress2{
@@ -159,4 +202,13 @@ padding-left: 15px;
   .congress2 img{
    
     margin: 0px;
+  }
+
+  .hide{
+    display:none;
+
+  }
+
+  .show{
+    display:inline
   }

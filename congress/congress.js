@@ -1,16 +1,22 @@
 import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
-import { getLastNumber, removeChildren } from '../utils/index.js'
+import { removeChildren } from '../utils/index.js'
 
 const members = [...senators, ...representatives] // modern way to combine arrays like a genus!
 
 const senatorDiv = document.querySelector('.senators')
 const loyaltyHeading = document.querySelector('.mostLoyal')
 const seniorityHeading = document.querySelector('.seniority')
-const heroNav = document.querySelector('#heroNav')
 const mostSenior = document.querySelector('.bio')
 const senInfo = document.querySelector('.info')
 const senButton = document.querySelector('#senbutton')
+const representButton = document.querySelector('#representButton')
+const repubButton = document.querySelector('#repubButton')
+const demButton = document.querySelector('#demButton')
+const showAll = document.querySelector('#showAll')
+const navButtons = document.querySelector('#navButtons')
+
+const fiveSen = document.querySelector('.fivesen')
 
 
 
@@ -25,13 +31,6 @@ const senButton = document.querySelector('#senbutton')
 
 
 
-const otherButton = document.createElement('button')
-otherButton.className = "sortButton"
-otherButton.textContent = 'Other Characters'
-
-const femaleButton = document.createElement('button')
-femaleButton.className = "sortButton"
-femaleButton.textContent = 'Female Characters'
 
 
 
@@ -50,6 +49,7 @@ function SimplifiedMembers(chamberFilter) {
       gender: senator.gender,
       seniority: +senator.seniority,
       imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
+      url: senator.url,
       missedVotesPct: senator.missed_votes_pct,
       loyaltyPct: senator.votes_with_party_pct,
       title: senator.short_title,
@@ -64,6 +64,7 @@ function populateSenatorDiv(simpleSenators) {
     const senFigure = document.createElement('figure')
     const figImg = document.createElement('img')
     const figCaption = document.createElement('figcaption')
+    
 
     figImg.src = senator.imgURL
     figCaption.textContent = senator.name
@@ -71,10 +72,18 @@ function populateSenatorDiv(simpleSenators) {
     senFigure.appendChild(figImg)
     senFigure.appendChild(figCaption)
     senatorDiv.appendChild(senFigure)
+    
+
+
   })
 
 
+
 }
+
+
+
+
 
 
 //Most Senior Senator Section
@@ -128,13 +137,12 @@ senInfo.appendChild(senBio)
 
 const filterSenators = (prop, value) => SimplifiedMembers().filter(member => member[prop] === value)
 
-console.log(filterSenators('gender', 'F'))
 
 
 
 
 
-/*
+
 
 const mostLoyal = SimplifiedMembers().reduce((acc, senator) => {
   if (senator.loyaltyPct === 100) {
@@ -143,18 +151,59 @@ const mostLoyal = SimplifiedMembers().reduce((acc, senator) => {
   return acc
 }, [])
 
-const cowardList = document.createElement('ol')
+const cowardList = document.createElement('ul')
 
 const spineless = mostLoyal.map((coward) => {
   let listItem = document.createElement('li')
-  listItem.textContent = coward.name
+  listItem.className = "loyaltyList"
+  listItem.textContent = coward.name + " | "
   cowardList.appendChild(listItem)
 })
 
 loyaltyHeading.appendChild(cowardList)
-*/
 
-populateSenatorDiv(SimplifiedMembers())
 
-const femaleSenators = filterSenators('gender', 'F')
-senButton.addEventListener('click', () => populateSenatorDiv(femaleSenators))
+
+
+
+senButton.addEventListener('click', () => populateSenatorDiv(filterSenators('title', 'Sen.')))
+representButton.addEventListener('click', () => populateSenatorDiv(filterSenators('title', 'Rep.')))
+repubButton.addEventListener('click', () => populateSenatorDiv(filterSenators('party', "R")))
+demButton.addEventListener('click', () => populateSenatorDiv(filterSenators('party', "D")))
+
+showAll.addEventListener('click', () => {
+  populateSenatorDiv(SimplifiedMembers())
+  showAll.className = "hide"
+  fiveSen.className= "hide"
+  navButtons.classList.remove("hide")
+
+
+})
+
+
+
+
+
+
+
+function populateSen5(simpleSenators) {
+  
+  
+  for(let i = 0; i < 5; i++)  {
+    let senator = simpleSenators[i]
+    const senFigure1 = document.createElement('figure')
+    const figImg1 = document.createElement('img')
+    const figCaption1 = document.createElement('figcaption')
+
+    figImg1.src = senator.imgURL
+    figCaption1.textContent = senator.name
+
+    senFigure1.appendChild(figImg1)
+    senFigure1.appendChild(figCaption1)
+    fiveSen.appendChild(senFigure1)
+  }
+
+
+}
+
+populateSen5(SimplifiedMembers())
