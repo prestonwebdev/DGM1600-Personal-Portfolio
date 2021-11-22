@@ -5,27 +5,98 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
   <title>People of Congress</title>
 </head>
 <body>
+  <nav id="navbar">
+    <ul class="nav-list">
+        
+      <li>
+        <a href="/index.html">HOME</a>
+    </li>
+
+        <li>
+            <a href="#welcome-section">ABOUT</a>
+        </li>
+        <li>
+            <a class="anchor" href="#projects">PROJECTS </a>
+        </li>
+
+        <li>
+            <a href="#contact">CONTACT </a>
+        </li>
+    </ul>
+</nav>
+
   <header>
-    <div>
-    <h1>People of Congress</h1>
-    <h2>The most spineless members of Congress who vote with their party 100% of the time are:</h2>
-  <div class='mostLoyal'></div>
-  <h3 class='seniority'></h3>
-</div>
-  <button>Senators</button>
-  <button>Representatives</button>
-  <button>Republicans</button>
-  <button>Democrats</button>
-  </header>
+    <section class="hero is-info is-large">
+    
+    
+      <div class="hero-body">
+        <div class="container">
+         <img src ="/images/Congress Hero-01-01.png">
+        </div>
+       
+      </div>
+    
+      
+    </section>
+
+</header>
+
+
   <main>
+    <div class = "peopleOfCongress">
+      <h1>Meet Your US Congress</h1>
+      <div id="seniorMember">
+      
+        <div class = "bio">
+          <h2 class = "h2Senior"> Most Senior Senator</h2>
+
+        </div>
+
+        <div class = "info">
+
+
+        </div>
+     
+
+
+      </div>
+    <div class='mostLoyal'></div>
+    <h3 class='seniority'></h3>
+  
+  
+  </div>
+    <button id="senbutton" class="sortButton">Senators</button>
+    <button>Representatives</button>
+    <button>Republicans</button>
+    <button>Democrats</button>
+    </header>
+  
     <div class="senators">
+    </div>
+
+
+
+    <div class = "learnMore">
+      <h1> Learn More About Our Congress</h1>
+      <figure class="congress2">
+        <img src="/images/congress2-01.png">
+      </figure>
+
+        <a href="https://www.congress.gov/"> <button class="button">Learn More</button></a>
+        
+          
+   
+   
+
     </div>
   </main>
   <footer>
-    <h3>For Educational Purposes Only &copy; Thor Anderson 2021</h3>
+    <h3>For Educational Purposes Only &copy; Preston Design & Dev 2021</h3>
   </footer>
   <script src="congress.js" type="module"></script>
 </body>

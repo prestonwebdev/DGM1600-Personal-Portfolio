@@ -1,26 +1,162 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+ 
+  #navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    justify-content: flex-end;
+    z-index: 99;
+   
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 1rem;
+    list-style-type: none;
+  }
+  
+  .nav-list a {
+    padding: 1rem;
+    margin-top: 0.3rem;
+    display: block;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: gray;
+    border-radius: 3px;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .nav-list a:hover {
+    background-color: black;
+    color: white;
   }
   
   header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
   }
+
+  .hero{
+    background-color: #92C7D3 !important;
+
+  }
+
+  @media screen and (min-width: 769px), print {
+  .hero.is-large .hero-body {
+      padding: 6rem 6rem !important;
+  }
+}
+
+
+  @media screen and (min-width: 500px){
+.hero.is-large .hero-body {
+    padding: 4rem 6rem;
+}
+  }
+ 
+  .hero-body{
+    padding: 0.5rem;
+  }
+
+
+
+  .peopleOfCongress{
+    padding-top: 20px;
+    background-color: #F0F0F0;
+  }
+
+  .peopleOfCongress h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  #seniorMember{
+    height:auto;
+    padding-top:50px ;
+    background-color: #F0F0F0;
+    display:flex;
+   justify-content: center;
+   padding-bottom:50px ;
+    
+  }
+
+  .bio{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 50px;
+  
+  }
+
+  .bio figure img{
+    min-width: 200px;
+    
+  }
+
+  .h2Senior{
+  
+padding-left: 15px;
+    font-size: 25px;
+ 
+  }
+
+  .info{
+    padding-top: 25px;
+  }
+
+  .senatorName{
+    font-size: 50px;  }
+  
+
+    .info{
+      font-size: 18px;
+      width: 500px;
+    }
+
   
   .senators {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   
   figure {
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
+    width: 160px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 1em !important;
   }
   
   figcaption {
     text-align: center;
+  }
+
+
+
+  .learnMore{
+    background-color: #6FA8B5;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+  }
+
+  .congress2{
+    min-width: 250px;
+    margin:0px !important;
+  }
+
+  .congress2 img{
+   
+    margin: 0px;
   }
