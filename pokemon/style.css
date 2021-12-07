@@ -3,9 +3,45 @@
   box-sizing: border-box;
 }
 
+#navbar {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  justify-content: flex-end;
+  z-index: 99;
+ 
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 1rem;
+  list-style-type: none;
+}
+
+.nav-list a {
+  padding: 1rem;
+  margin-top: 0.3rem;
+  display: block;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: gray;
+  border-radius: 3px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-list a:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
 .pokeGrid {
   display: flex;
   flex-wrap: wrap;
+justify-content: center;
 }
 
 .scene {
@@ -46,4 +82,48 @@
 
 figure img {
   width: 200px;
+}
+
+#searchBar{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.title{
+
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  color: #5A7A69 !important;
+  font-size: 3rem !important;
+}
+
+.subtitle{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  color: #5A7A69 !important;
+  padding-bottom: 20px;
+ 
+}
+
+.hero-body{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+height: auto;
+}
+
+.heroImg{
+  padding-top: 50px;
+}
+
+.hero{
+  height: auto;
+  display:flex;
+  padding: 5rem;
+  background-color: #FFF6DD !important;
 }
