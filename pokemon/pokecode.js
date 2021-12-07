@@ -20,8 +20,12 @@ function loadPokemon(offset = 0, limit = 25) {
   })
 }
 
+const findPoke = document.querySelector('#searchBar')
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
+
+
+
 loadButton.addEventListener('click', () => {
   removeChildren(pokeGrid)
   loadPokemon()
@@ -61,6 +65,26 @@ function getAbilitiesArray(commaString) {
     }
   })
 }
+
+let input = document.querySelector("#searchBar")
+
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    let userIn = input.value
+    findPokemon(userIn)
+  }
+});
+
+function findPokemon(value){
+ 
+  
+  loadPokemon(value-1, 1)
+
+};
+
+findPokemon()
+
 
 function populatePokeCard(singlePokemon) {
   const pokeScene = document.createElement('div')
