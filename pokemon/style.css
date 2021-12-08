@@ -45,22 +45,27 @@ justify-content: center;
 }
 
 .scene {
-  width: 200px;
-  height: 260px;
+  width: 300px;
+  height: 400px;
   perspective: 600px;
   margin: .5rem;
+  background-color: #88888815;
+  box-shadow: 0px 0px 10px #8888886b;
+
 }
 
-.card {
+.mycard {
   width: 100%;
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  
+ 
 }
 
-.card.is-flipped {
+.mycard.is-flipped {
   transform: rotateY(180deg);
 }
 
@@ -72,16 +77,55 @@ justify-content: center;
 }
 
 .front {
-  background: #2a75bb;
+  background: white;
+ 
+ 
+}
+
+.front:af {
+  background: white;
+   border-radius: 10px;
+ 
 }
 
 .back {
-  background: #c7a008;
+  background: white;
   transform: rotateY(180deg);
+ padding: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.smallPoke{
+  width: 150px;
+  align-items: center;
+  padding:0;
 }
 
 figure img {
-  width: 200px;
+  width: 280px;
+  display: flex;
+}
+
+figcaption::first-letter {
+  text-transform: capitalize;
+
+  line-height: 3em;
+  
+}
+
+
+figcaption {
+  text-align: center;
+  font-size: 2rem;
 }
 
 #searchBar{
@@ -90,6 +134,8 @@ figure img {
   margin-right: auto;
   display: flex;
 }
+
+
 
 .title{
 
@@ -126,4 +172,11 @@ height: auto;
   display:flex;
   padding: 5rem;
   background-color: #FFF6DD !important;
+}
+
+
+.Starter h1{
+  text-align: center;
+  font-size: 2rem;
+padding: 15px;
 }

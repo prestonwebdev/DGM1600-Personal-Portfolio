@@ -9,6 +9,7 @@ const morePokemon = document.querySelector('.morePokemon') //Load More Pokemon B
 
 
 
+
 //Event Listeners 
 
 //Load  Pokemon Button Event Listener
@@ -66,7 +67,7 @@ function getAPIData(url) {
 
 
 //Function To Load Pokemon To the DOM
-function loadPokemon(offset = 0, limit = 25) {
+function loadPokemon(offset = 0, limit = 15) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`,
   ).then(async (data) => {
@@ -96,22 +97,14 @@ function getAbilitiesArray(commaString) {
 
 
 //Funtion to Find Pokemon at the entered Value
-function findPokemon(value){
 
-  getAPIData(
-    `https://pokeapi.co/api/v2/pokemon/${value}`,
-  ).then(async (data) => {
-    for (const pokemon of data.results) {
-      await getAPIData(data.res.url).then((pokeData) =>
-        populatePokeCard(pokeData),
-      )
-    }
-  })
+function findPokemon(value) {
+
+  removeChildren(pokeGrid)
+  getAPIData(`https://pokeapi.co/api/v2/pokemon/${value}`).then((data) =>
+    populatePokeCard(data)
+  )
 }
-
-  
-
-
 
 
 
@@ -120,7 +113,7 @@ function populatePokeCard(singlePokemon) {
   const pokeScene = document.createElement('div')
   pokeScene.className = 'scene'
   const pokeCard = document.createElement('div')
-  pokeCard.className = 'card'
+  pokeCard.className = 'mycard'
   pokeCard.addEventListener('click', () =>
     pokeCard.classList.toggle('is-flipped'),
   )
@@ -151,6 +144,7 @@ function populateCardFront(pokemon) {
   }
   const pokeCaption = document.createElement('figcaption')
   pokeCaption.textContent = `${pokemon.name}`
+  
   pokeFront.appendChild(pokeImg)
   pokeFront.appendChild(pokeCaption)
 
@@ -165,7 +159,15 @@ function populateCardFront(pokemon) {
 function populateCardBack(pokemon) {
   const pokeBack = document.createElement('div')
   pokeBack.className = 'cardFace back'
-  const label = document.createElement('h4')
+  const imgDiv = document.createElement('div')
+  imgDiv.className = 'imgDiv'
+  let smallPoke = document.createElement('img')
+  smallPoke.className = 'smallPoke'
+  smallPoke.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
+
+  const pokeName = document.createElement('h2')
+  pokeName.textContent = `${pokemon.name}`
+  const label = document.createElement('h2')
   label.textContent = 'Abilities:'
   const abilityList = document.createElement('ul')
   pokemon.abilities.forEach((ability) => {
@@ -173,6 +175,10 @@ function populateCardBack(pokemon) {
     abilityItem.textContent = ability.ability.name
     abilityList.appendChild(abilityItem)
   })
+
+  imgDiv.appendChild(smallPoke)
+  imgDiv.appendChild(pokeName)
+  pokeBack.appendChild(imgDiv)
   pokeBack.appendChild(label)
   pokeBack.appendChild(abilityList)
   return pokeBack
@@ -184,10 +190,16 @@ function typesBackground(pokemon, card) {
   let pokeType1 = pokemon.types[0].type.name
   let pokeType2 = pokemon.types[1]?.type.name
   if (!pokeType2) {
-    card.style.setProperty('background', getPokeTypeColor(pokeType1))
+    card.style.setProperty('border',
+    `10px Solid ${getPokeTypeColor(pokeType1)}`)
   } else {
-    card.style.setProperty('background',
-    `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)})`)
+    card.style.setProperty('border',
+    `10px solid `)
+
+
+    card.style.setProperty('border-image',
+    ` linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)}) 30 `)
+   
   }
 }
 
@@ -197,40 +209,40 @@ function getPokeTypeColor(pokeType) {
   let color
   switch (pokeType) {
     case 'grass':
-      color = '#00ff00'
+      color = '#00ff0022'
       break
       case 'fire':
-      color = '#ff0000'
+      color = '#ff000022'
       break
       case 'water':
-      color = '#0000ff'
+      color = '#0000ff22'
       break
       case 'bug':
-      color = '#7fff00'
+      color = '#7fff0022'
       break
       case 'normal':
-      color = '#f5f5dc'
+      color = '#f5f5dc22'
       break
       case 'flying':
-      color = '#00ffff'
+      color = '#00ffff22'
       break
       case 'poison':
-      color = '#c300ff'
+      color = '#c300ff22'
       break
       case 'electric':
-      color = '#c8ff00'
+      color = '#c8ff0022'
       break
       case 'psychic':
-      color = '#e96c95'
+      color = '#e96c9522'
       break
       case 'ground':
-      color = '#ceb250'
+      color = '#ceb25022'
       break
       case 'rock':
-      color = '#444444'
+      color = '#44444422'
       break
       default:
-        color = '#999999'
+        color = '#99999910'
   }
   return color
 }
