@@ -36,12 +36,18 @@
   color: white;
 }
 
-
+.showMore{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
 .pokeGrid {
   display: flex;
   flex-wrap: wrap;
 justify-content: center;
+padding: 50px;
 }
 
 .scene {
@@ -53,6 +59,17 @@ justify-content: center;
   box-shadow: 0px 0px 10px #8888886b;
 
 }
+
+.scene1 {
+  width: 300px;
+  height: 400px;
+  perspective: 600px;
+  margin: .5rem;
+  background-color: #88888815;
+  box-shadow: 0px 0px 10px #8888886b;
+
+}
+
 
 .mycard {
   width: 100%;
@@ -122,6 +139,16 @@ figcaption::first-letter {
   
 }
 
+.pokeName::first-letter
+{
+  text-transform: capitalize;
+}
+
+.pokeName{
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
 
 figcaption {
   text-align: center;
@@ -135,6 +162,34 @@ figcaption {
   display: flex;
 }
 
+.newPokeDiv{
+  display:flex;
+  justify-content: center;
+  background-color: rgba(179, 179, 179, 0.452);
+margin: 15px;
+width: 300px;
+height: 410px; 
+}
+
+.fivePokeDiv{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.section{
+  display: flex;
+  background-color: #46464613;
+  min-height: 450px;
+  justify-content: space-evenly;
+}
+
+.CreateTxt{
+  display:flex;
+  flex-direction: column;
+  align-items: middle;
+  justify-content: center;
+}
 
 
 .title{
@@ -152,6 +207,7 @@ figcaption {
   display: flex;
   color: #5A7A69 !important;
   padding-bottom: 20px;
+  padding-left: 5px;;
  
 }
 
@@ -179,4 +235,14 @@ height: auto;
   text-align: center;
   font-size: 2rem;
 padding: 15px;
+}
+
+
+.hide{
+  display:none;
+
+}
+
+.show{
+  display:inline;
 }
