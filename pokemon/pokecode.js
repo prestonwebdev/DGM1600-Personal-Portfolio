@@ -3,9 +3,7 @@ import { removeChildren } from '../utils/index.js'
 //Query Selectors
 let input = document.querySelector("#searchBar") //search
 const pokeGrid = document.querySelector('.pokeGrid')  // Pokemon Grid
-
 const newButton = document.querySelector('.newPokemon')  //Create A Pokemon Button
-
 const fivePokeDiv = document.querySelector('.fivePokeDiv') //See More Pokemon Button
 const showMore = document.querySelector('.showMore') //See More Pokemon Button
 const main = document.querySelector('#main')
@@ -15,10 +13,6 @@ let showAll = document.createElement('button')
 showAll.id = "showAll"
 showAll.className = "button"
 showAll.textContent = "Show More Pokemon"
-
-
-
-
 
 
 
@@ -60,14 +54,10 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-
+//show More Pokemon Event Listener 
 showAll.addEventListener('click', () => {
   loadPokemon((15, showNum))
-
  showNum += 15
-
-
-
 
 })
 
@@ -156,12 +146,12 @@ function populatePokeCard(singlePokemon) {
   pokeScene.appendChild(pokeCard)
   pokeGrid.appendChild(pokeScene)
 
-  console.log(singlePokemon)
+ 
 }
 
 
-
-
+//In future I will most likely pass in a variable with the location to populate pokecard to eliminate extra code. 
+//Populate Function Slightly modified for New Pokemon
 function populateNewPokeCard(singlePokemon) {
   const pokeScene = document.createElement('div')
   pokeScene.className = 'scene'
@@ -179,10 +169,8 @@ function populateNewPokeCard(singlePokemon) {
   newPokeDiv.appendChild(pokeScene)
 }
 
-
+//Modified function to display the first few pokemon and then hide them when the show more button is clicked. 
 function populate5PokeCards(singlePokemon) {
-
- 
   const pokeScene1 = document.createElement('div')
   pokeScene1.className = 'scene1'
   const pokeCard = document.createElement('div')
@@ -370,17 +358,12 @@ function getPokeTypeColor(pokeType) {
 
 
 
-
+//loads First 4 pokemon on screen
   function firstpoke(){
-
-
-  let poke1 = loadSinglePoke(1)
+  loadSinglePoke(1)
   loadSinglePoke(4)
   loadSinglePoke(7)
   loadSinglePoke(25)
-
- 
-
   }
 
 
