@@ -266,8 +266,8 @@ function populateCardBack(pokemon) {
     console.log()
     attackBar.max = '100'
 
-    const defence = document.createElement('h3')
-    defence.textContent = `Defence: ${pokemon.stats[2].base_stat}`
+    const defense = document.createElement('h3')
+    defense.textContent = `Defense: ${pokemon.stats[2].base_stat}`
     const defBar = document.createElement('progress')
     defBar.classList = 'progress is-info'
     defBar.value = `${pokemon.stats[2].base_stat}`
@@ -287,7 +287,7 @@ function populateCardBack(pokemon) {
   pokeBack.appendChild(attackBar)
 
   
-  pokeBack.appendChild(defence)
+  pokeBack.appendChild(defense)
   pokeBack.appendChild(defBar)
   
   return pokeBack

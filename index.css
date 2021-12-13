@@ -6,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -20,7 +20,20 @@ a {
   width: 100%;
   position: fixed;
   background-color: white;
-  justify-content: flex-end;
+  justify-content: space-around;
+  z-index: 99;
+}
+
+.logo{
+  width: 100% ;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.smallLogo {
+  width: 180px;
+
 }
 
 .nav-list {
@@ -44,6 +57,44 @@ a {
   background-color: black;
   color: white;
 }
+
+
+
+/* Work Together Section */
+#workTogether-section{
+  height: 1189px;
+  background: transparent linear-gradient(180deg, #49916F 0%, #000000 100%) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.text{
+  font-family: 'Roboto', sans-serif;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 100;
+  color:white;
+}
+
+.text h2{
+  font-family: 'Roboto', sans-serif;
+font-size: 2.8rem;;
+  font-weight: 100;
+  color:white;
+}
+
+.CTA{
+padding: 200px;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
 
 /*Welcome Section*/
 
