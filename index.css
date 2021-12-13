@@ -7,10 +7,49 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
+  background-color: black;
+  
+}
+
+
+.projCard{
+  border-radius: 2px;
+  width: 350px;
+  height: 425px;
+  padding:10px;
+  border: 0.25px solid #bfbfbf71;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px #aaaaaa88;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px;
+  position:static;
+  transition: transform 0.2s ease-out;
+  overflow: hidden;
+  border: none;
+ flex-direction: column;
+ border-radius: 10px;;
+
+ 
+  
+}
+
+.projCard:hover {
+ 
+  transform: translateY(-8px);
 }
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 3.2rem;
+  text-align: center;
 }
 
 /*Navigation*/
@@ -62,10 +101,14 @@ a {
 
 /* Work Together Section */
 #workTogether-section{
-  height: 1189px;
+  height: 60vh;
   background: transparent linear-gradient(180deg, #49916F 0%, #000000 100%) 0% 0% no-repeat padding-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  
+  
   
 
 }
@@ -77,20 +120,42 @@ a {
   justify-content: space-around;
   font-weight: 100;
   color:white;
+  height:8%;
+  width: 100%;
 }
 
 .text h2{
   font-family: 'Roboto', sans-serif;
-font-size: 2.8rem;;
+font-size: 3rem;
   font-weight: 100;
+  opacity: 40%;
   color:white;
 }
 
 .CTA{
-padding: 200px;
+
 display:flex;
 justify-content: center;
 align-items: center;
+height: 90%;
+color:white;
+width: 60%;
+flex-direction: column;
+}
+
+.CTA h1{
+  font-size: 4.5rem;
+}
+
+.CTA button{
+  margin-top: 50px;
+  border-radius: 59px;
+  font-size: 2rem;
+  padding: 10px;
+  width:350px;
+  background-color: white;
+  border: none;
+  color:#4C8E6F;
 }
 
 
@@ -100,67 +165,81 @@ align-items: center;
 
 #welcome-section {
   background-color: black;
-  height: 100vh;
+  height: 95vh;
   width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-width: 1px;
+
 }
 
 #welcome-section img {
-  height: 80%;
-  width: auto;
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
 }
 
 /*Projects Section*/
 
-.projects-section {
-  text-align: center;
 
+
+.projects-section {
+
+
+  background-color: black;
   display: block;
-  background-image: url("/images/background.jpg");
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   scroll-margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.projectContainer{
+  margin-left: 20px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1600px;
 }
 
 .projects-section-header {
-  padding-top: 4rem;
 
   font-size: 3rem;
-  color: black;
-  text-align: center;
-  font-weight: 500;
+  color: white;
+  text-align: left;
+  font-weight: 300;
+  padding: 25px;
+  margin-bottom: 50px;
 }
 
 .projects-grid {
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-
-  padding: 2rem 0;
 }
 
-.project-tile {
-  margin: 1rem;
-}
-figure > img {
-  height: 500px;
+
+.cardimg{
+  width:100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  
+
 }
 
-figure > figcaption {
-  text-align: center;
-  font-size: x-large;
-  color: white;
-  position: relative;
-  top: -60px;
-  background-color: rgba(49, 49, 49, 0.692);
-  padding: 1rem;
-  font-size: 1.2rem;
-  width: 600px;
+
+
+.projCard img {
+  width:100%;
+  justify-content: center;
+  border-radius: 10px 10px 0px 0px;
 }
+
+
 
 .contact-section {
   display: flex;
@@ -197,12 +276,14 @@ figure > figcaption {
 #contact {
   height: 600px;
   padding-bottom: 0;
+  color:white;
 }
 
 .contact-section-header > p {
   font-size: 2rem;
   padding: 3rem;
   font-weight: 500;
+  color:white;
 }
 
 .contact-links {
@@ -215,7 +296,7 @@ figure > figcaption {
 
 .contact-links a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   margin: 1rem;
   font-size: 2rem;
   text-shadow: 2px 2px 1px #1f1f1f2c;

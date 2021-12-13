@@ -42,7 +42,48 @@
 
 
 
-
+  #navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    justify-content: space-around;
+    z-index: 99;
+  }
+  
+  .logo{
+    width: 100% ;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .smallLogo {
+    width: 180px;
+  
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 1rem;
+    list-style-type: none;
+  }
+  
+  .nav-list a {
+    padding: 1rem;
+    margin-top: 0.3rem;
+    display: block;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: gray;
+    border-radius: 3px;
+    font-weight: 300;
+  }
+  
+  .nav-list a:hover {
+    background-color: black;
+    color: white;
+  }
 
   .sw-nav{
     display: flex;
