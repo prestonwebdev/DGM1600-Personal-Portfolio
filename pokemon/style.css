@@ -8,9 +8,23 @@
   width: 100%;
   position: fixed;
   background-color: white;
-  justify-content: flex-end;
+  justify-content: space-around;
   z-index: 99;
- 
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.logo{
+  width: 100% ;
+
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.smallLogo {
+  width: 180px;
+
 }
 
 .nav-list {
@@ -28,14 +42,12 @@
   color: gray;
   border-radius: 3px;
   font-weight: 300;
-  font-family: "Montserrat", sans-serif;
 }
 
 .nav-list a:hover {
   background-color: black;
   color: white;
 }
-
 .showMore{
   display:flex;
   align-items: center;
@@ -51,8 +63,8 @@ padding: 50px;
 }
 
 .scene {
-  width: 300px;
-  height: 400px;
+  width: 270px;
+  height: 35px;
   perspective: 600px;
   margin: .5rem;
   background-color: #88888815;
@@ -61,8 +73,8 @@ padding: 50px;
 }
 
 .scene1 {
-  width: 300px;
-  height: 400px;
+  width: 270px;
+  height: 385px;
   perspective: 600px;
   margin: .5rem;
   background-color: #88888815;
