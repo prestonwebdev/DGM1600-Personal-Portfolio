@@ -2,7 +2,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 #navbar {
   display: flex;
   width: 100%;
@@ -48,6 +47,7 @@
   background-color: black;
   color: white;
 }
+
 .showMore{
   display:flex;
   align-items: center;
@@ -64,7 +64,7 @@ padding: 50px;
 
 .scene {
   width: 270px;
-  height: 35px;
+  height: 375px;
   perspective: 600px;
   margin: .5rem;
   background-color: #88888815;
@@ -74,7 +74,7 @@ padding: 50px;
 
 .scene1 {
   width: 270px;
-  height: 385px;
+  height: 375px;
   perspective: 600px;
   margin: .5rem;
   background-color: #88888815;
@@ -93,30 +93,25 @@ padding: 50px;
   
  
 }
-
 .mycard.is-flipped {
   transform: rotateY(180deg);
 }
-
 .cardFace {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
-
 .front {
   background: white;
  
  
 }
-
 .front:af {
   background: white;
    border-radius: 10px;
  
 }
-
 .back {
   background: white;
   transform: rotateY(180deg);
@@ -124,7 +119,6 @@ padding: 50px;
   flex-direction: column;
   align-items: center;
 }
-
 .imgDiv{
   display: flex;
   flex-direction: column;
@@ -132,23 +126,19 @@ padding: 50px;
   justify-content: center;
   
 }
-
 .smallPoke{
   width: 150px;
   align-items: center;
   padding:0;
 }
-
 figure img {
   width: 280px;
   display: flex;
 }
-
 figcaption::first-letter {
   text-transform: capitalize;
-
   line-height: 3em;
-  
+
 }
 
 .pokeName::first-letter
@@ -166,7 +156,6 @@ figcaption {
   text-align: center;
   font-size: 2rem;
 }
-
 #searchBar{
   width: 50%;
   margin-left: auto;
@@ -205,14 +194,12 @@ height: 410px;
 
 
 .title{
-
   margin-left: auto;
   margin-right: auto;
   display: flex;
   color: #5A7A69 !important;
   font-size: 3rem !important;
 }
-
 .subtitle{
   margin-left: auto;
   margin-right: auto;
@@ -220,29 +207,24 @@ height: 410px;
   color: #5A7A69 !important;
   padding-bottom: 20px;
   padding-left: 5px;;
- 
+
 }
 
 .hero-body{
 display: flex;
 flex-direction: column;
 align-items: center;
-
 height: auto;
 }
-
 .heroImg{
   padding-top: 50px;
 }
-
 .hero{
   height: auto;
   display:flex;
   padding: 5rem;
   background-color: #FFF6DD !important;
 }
-
-
 .Starter h1{
   text-align: center;
   font-size: 2rem;
